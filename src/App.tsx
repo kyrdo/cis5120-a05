@@ -1,13 +1,15 @@
 // import { useState } from 'react'
 import './App.css'
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 // import { BsArrowLeftShort, BsChevronDown, BsPlus, BsBookmarksFill } from "react-icons/bs"
 // import { PiYarn } from "react-icons/pi";
 // import { AiFillHome } from "react-icons/ai";
 // import { BiSolidBookReader, BiSolidNotepad, BiNote, BiSearchAlt2} from "react-icons/bi";
 import Sidebar from './components/Sidebar';
 import HomePage from './components/HomePage';
-
-
+import DictionaryPage from './components/DictionaryPage';
+import NewProjPage from './components/NewProj';
+// import HomePage from './components/HomePage';
 function App() {
   /*
   const [open, setOpen] = useState(true)
@@ -143,10 +145,19 @@ function App() {
   )
   */
  return (
+  <Router>
   <div className="flex">
     <Sidebar/>
-    <HomePage/>
+    <main>
+        <Routes>
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/dictionary" element={<DictionaryPage />} />
+          <Route path="/newproj" element={<NewProjPage />} />
+        </Routes>
+    </main>
+    {/* <HomePage/> */}
   </div>
+  </Router>
  )
 }
 

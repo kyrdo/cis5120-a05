@@ -1,9 +1,9 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom';
 import { BsArrowLeftShort, BsChevronDown, BsPlus, BsBookmarksFill } from "react-icons/bs"
 import { PiYarn } from "react-icons/pi";
 import { AiFillHome } from "react-icons/ai";
 import { BiSolidBookReader, BiSolidNotepad, BiNote, BiSearchAlt2} from "react-icons/bi";
-
 
 function Sidebar() {
   const [open, setOpen] = useState(true)
@@ -11,17 +11,17 @@ function Sidebar() {
   const [saveMenuOpen, setSaveMenuOpen] = useState(false);
 
   const Menus = [
-    { title: "Home", spacing: true, icon: <AiFillHome />},
-    { title: "Dictionary", icon: <BiSolidBookReader />}, 
+    { title: "Home", spacing: true, icon: <AiFillHome />, link: "/home"},
+    { title: "Dictionary", icon: <BiSolidBookReader />, link: "/dictionary"}, 
     { title: "Projects",
       icon: <BiSolidNotepad />,
       addIcon: true,
       projMenu: true,
       submenuItems: [
-        { title: "Add New Project", addIcon: true, icon: <BsPlus/>},
-        { title: "Project 1", addIcon: true, icon: <BiNote/>}, 
-        { title: "Project 2", addIcon: true, icon: <BiNote/>},
-        { title: "Project 3", addIcon: true, icon: <BiNote/>}
+        { title: "Add New Project", addIcon: true, icon: <BsPlus/>, link: "/newproj"},
+        { title: "Project 1", icon: <BiNote/>}, 
+        { title: "Project 2", icon: <BiNote/>},
+        { title: "Project 3", icon: <BiNote/>}
       ],
     },
     { title: "Saved",
@@ -30,9 +30,9 @@ function Sidebar() {
       saveMenu: true,
       submenuItems: [
         { title: "Add to Saved", addIcon: true, icon: <BsPlus/>},
-        { title: "Project 1", addIcon: true, icon: <BiNote/>},
-        { title: "Project 2", addIcon: true, icon: <BiNote/>}, 
-        { title: "Project 3", addIcon: true, icon: <BiNote/>},
+        { title: "Project 1", icon: <BiNote/>},
+        { title: "Project 2", icon: <BiNote/>}, 
+        { title: "Project 3", icon: <BiNote/>},
       ],
     },
   ];
@@ -53,50 +53,85 @@ function Sidebar() {
         </div>
 
         <div>
-          <button
-            onClick={()=>{}}
-            className="flex items-center justify-center w-full bg-dark-purple text-white py-2 px-4 rounded-md hover:bg-hover-beige hover:text-dark-purple mt-6"
-          >
-            
-            <span className="text-2xl block float-left">
-              <BsPlus/>
-            </span>
-            {open ? "New Project" : ""}
-
-          </button>
+          
+          <Link to="/newproj">
+            <button
+              onClick={()=>{}}
+              className="flex items-center justify-center w-full bg-dark-purple text-white py-2 px-4 rounded-md hover:bg-hover-beige hover:text-dark-purple mt-6"
+            >
+              <span className="text-2xl block float-left">
+                <BsPlus/>
+              </span>
+              {open ? "New Project" : ""}
+            </button>
+          </Link>
         </div>
 
         <ul className="pt-2">
           {Menus.map((menu, index) => (
             <>
+            {menu.link? 
+              <Link to={menu.link}>
+                <li key={index} className={`text-dark-purple text-sm flex
+                items-center gap-x-4 cursor-pointer p-2 hover:bg-hover-beige 
+                ounded-md ${menu.spacing ? "mt-9" : "mt-2"}`} onClick={()=>{menu.projMenu? setProjMenuOpen(!projMenuOpen) : (menu.saveMenu? setSaveMenuOpen(!saveMenuOpen) : "")}}>
+                  <span className="text-2xl block float-left">
+                    {menu.icon}
+                  </span>
+                  <span className={`text-base font-medium flex-1 
+                    duration-200 ${!open && "hidden"}`}>
+                    {menu.title}
+                  </span>
+                    {menu.projMenu && open && (
+                    <BsChevronDown className={`${projMenuOpen && "rotate-180"}`} onClick = {() => {setProjMenuOpen(!projMenuOpen)}}/>
+                    )}
+                    {menu.saveMenu && open && (
+                    <BsChevronDown className={`${saveMenuOpen && "rotate-180"}`} onClick = {() => {setSaveMenuOpen(!saveMenuOpen)}}/>
+                    )}
+                </li>
+              </Link> 
+            : 
               <li key={index} className={`text-dark-purple text-sm flex
-              items-center gap-x-4 cursor-pointer p-2 hover:bg-hover-beige 
-              ounded-md ${menu.spacing ? "mt-9" : "mt-2"}`}>
+                items-center gap-x-4 cursor-pointer p-2 hover:bg-hover-beige 
+                ounded-md ${menu.spacing ? "mt-9" : "mt-2"}`} onClick={()=>{menu.projMenu? setProjMenuOpen(!projMenuOpen) : (menu.saveMenu? setSaveMenuOpen(!saveMenuOpen) : "")}}>
                 <span className="text-2xl block float-left">
-                  {menu.icon}
+                    {menu.icon}
                 </span>
                 <span className={`text-base font-medium flex-1 
-                  duration-200 ${!open && "hidden"}`}>
-                  {menu.title}
+                    duration-200 ${!open && "hidden"}`}>
+                    {menu.title}
                 </span>
                 {menu.projMenu && open && (
-                  <BsChevronDown className={`${projMenuOpen && "rotate-180"}`} onClick = {() => {setProjMenuOpen(!projMenuOpen)}}/>
+                    <BsChevronDown className={`${projMenuOpen && "rotate-180"}`} onClick = {() => {setProjMenuOpen(!projMenuOpen)}}/>
                 )}
                 {menu.saveMenu && open && (
-                  <BsChevronDown className={`${saveMenuOpen && "rotate-180"}`} onClick = {() => {setSaveMenuOpen(!saveMenuOpen)}}/>
+                    <BsChevronDown className={`${saveMenuOpen && "rotate-180"}`} onClick = {() => {setSaveMenuOpen(!saveMenuOpen)}}/>
                 )}
               </li>
+            }
               {menu.projMenu && projMenuOpen && open &&(
                 <ul>
                   {menu.submenuItems.map((submenuItem, index) => (
-                    <li key={index} className={`text-dark-purple text-sm flex
-                    items-center gap-x-4 cursor-pointer p-2 px-5 hover:bg-hover-beige 
-                    ounded-md`}>
-                      <span className="text-2xl block float-left">
-                        {submenuItem.icon}
-                      </span>
-                      {submenuItem.title}
-                    </li>
+                    submenuItem.addIcon?
+                        <Link to="/newproj">
+                        <li key={index} className={`text-dark-purple text-sm flex
+                        items-center gap-x-4 cursor-pointer p-2 px-5 hover:bg-hover-beige 
+                        ounded-md`}>
+                        <span className="text-2xl block float-left">
+                            {submenuItem.icon}
+                        </span>
+                        {submenuItem.title}
+                        </li>
+                        </Link>
+                    :
+                        <li key={index} className={`text-dark-purple text-sm flex
+                        items-center gap-x-4 cursor-pointer p-2 px-5 hover:bg-hover-beige 
+                        ounded-md`}>
+                        <span className="text-2xl block float-left">
+                            {submenuItem.icon}
+                        </span>
+                        {submenuItem.title}
+                        </li>
                   ))}
                 </ul>
               )}
