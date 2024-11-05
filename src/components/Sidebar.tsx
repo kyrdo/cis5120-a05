@@ -1,15 +1,11 @@
-// import { useState } from 'react'
-import './App.css'
-// import { BsArrowLeftShort, BsChevronDown, BsPlus, BsBookmarksFill } from "react-icons/bs"
-// import { PiYarn } from "react-icons/pi";
-// import { AiFillHome } from "react-icons/ai";
-// import { BiSolidBookReader, BiSolidNotepad, BiNote, BiSearchAlt2} from "react-icons/bi";
-import Sidebar from './components/Sidebar';
-import HomePage from './components/HomePage';
+import { useState } from 'react'
+import { BsArrowLeftShort, BsChevronDown, BsPlus, BsBookmarksFill } from "react-icons/bs"
+import { PiYarn } from "react-icons/pi";
+import { AiFillHome } from "react-icons/ai";
+import { BiSolidBookReader, BiSolidNotepad, BiNote, BiSearchAlt2} from "react-icons/bi";
 
 
-function App() {
-  /*
+function Sidebar() {
   const [open, setOpen] = useState(true)
   const [projMenuOpen, setProjMenuOpen] = useState(false);
   const [saveMenuOpen, setSaveMenuOpen] = useState(false);
@@ -42,7 +38,6 @@ function App() {
   ];
 
   return (
-    <div className="flex">
       <div className={`bg-beige h-screen p-5 pt-8 ${open ? 
         "w-72" : "w-20"} duration-300 relative`}>
         <BsArrowLeftShort className={`bg-white text-dark-purple 
@@ -133,21 +128,7 @@ function App() {
           />
         </div>
       </div>
-
-
-
-      <div className="p-7">
-        <h1 className="text-2xl font-semibold">Home Page</h1>
-      </div>
-    </div>
   )
-  */
- return (
-  <div className="flex">
-    <Sidebar/>
-    <HomePage/>
-  </div>
- )
 }
 
-export default App
+export default Sidebar
