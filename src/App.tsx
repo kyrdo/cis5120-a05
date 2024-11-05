@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import { BsArrowLeftShort, BsSearch, BsChevronDown, BsPlus, BsBookmarksFill } from "react-icons/bs"
+import { BsArrowLeftShort, BsChevronDown, BsPlus, BsBookmarksFill } from "react-icons/bs"
 import { PiYarn } from "react-icons/pi";
 import { AiFillHome } from "react-icons/ai";
 import { BiSolidBookReader, BiSolidNotepad, BiNote, BiSearchAlt2} from "react-icons/bi";
@@ -20,9 +20,9 @@ function App() {
       projMenu: true,
       submenuItems: [
         { title: "Add New Project", addIcon: true, icon: <BsPlus/>},
-        { title: "Submenu 1", addIcon: true, icon: <BiNote/>}, 
-        { title: "Submenu 2", addIcon: true, icon: <BiNote/>},
-        { title: "Submenu 3", addIcon: true, icon: <BiNote/>}
+        { title: "Project 1", addIcon: true, icon: <BiNote/>}, 
+        { title: "Project 2", addIcon: true, icon: <BiNote/>},
+        { title: "Project 3", addIcon: true, icon: <BiNote/>}
       ],
     },
     { title: "Saved",
@@ -31,9 +31,9 @@ function App() {
       saveMenu: true,
       submenuItems: [
         { title: "Add to Saved", addIcon: true, icon: <BsPlus/>},
-        { title: "Submenu 1", addIcon: true, icon: <BiNote/>},
-        { title: "Submenu 2", addIcon: true, icon: <BiNote/>}, 
-        { title: "Submenu 3", addIcon: true, icon: <BiNote/>},
+        { title: "Project 1", addIcon: true, icon: <BiNote/>},
+        { title: "Project 2", addIcon: true, icon: <BiNote/>}, 
+        { title: "Project 3", addIcon: true, icon: <BiNote/>},
       ],
     },
   ];
