@@ -3,7 +3,7 @@ import './App.css'
 import { BsArrowLeftShort, BsSearch, BsChevronDown, BsPlus, BsBookmarksFill } from "react-icons/bs"
 import { PiYarn } from "react-icons/pi";
 import { AiFillHome } from "react-icons/ai";
-import { BiSolidBookReader, BiSolidNotepad, BiNote } from "react-icons/bi";
+import { BiSolidBookReader, BiSolidNotepad, BiNote, BiSearchAlt2} from "react-icons/bi";
 
 
 function App() {
@@ -19,9 +19,10 @@ function App() {
       addIcon: true,
       projMenu: true,
       submenuItems: [
-        { title: "Submenu 1", addIcon: true, icon: <BiNote/>},
-        { title: "Submenu 2", addIcon: true, icon: <BiNote/>}, 
-        { title: "Submenu 3", addIcon: true, icon: <BiNote/>},
+        { title: "Add New Project", addIcon: true, icon: <BsPlus/>},
+        { title: "Submenu 1", addIcon: true, icon: <BiNote/>}, 
+        { title: "Submenu 2", addIcon: true, icon: <BiNote/>},
+        { title: "Submenu 3", addIcon: true, icon: <BiNote/>}
       ],
     },
     { title: "Saved",
@@ -29,6 +30,7 @@ function App() {
       addIcon: true,
       saveMenu: true,
       submenuItems: [
+        { title: "Add to Saved", addIcon: true, icon: <BsPlus/>},
         { title: "Submenu 1", addIcon: true, icon: <BiNote/>},
         { title: "Submenu 2", addIcon: true, icon: <BiNote/>}, 
         { title: "Submenu 3", addIcon: true, icon: <BiNote/>},
@@ -52,15 +54,18 @@ function App() {
           </h1>
         </div>
 
-        <div className={`flex items-center rounded-md bg-light-purple mt-6 ${!open ? "px-2.5" : "px-4"} py-2`}>
-          <BsSearch className={`text-white text-lg block float-left cursor-pointer ${open && "mr-2"}`}/>
+        <div>
+          <button
+            onClick={()=>{}}
+            className="flex items-center justify-center w-full bg-dark-purple text-white py-2 px-4 rounded-md hover:bg-hover-beige hover:text-dark-purple mt-6"
+          >
+            
+            <span className="text-2xl block float-left">
+              <BsPlus/>
+            </span>
+            {open ? "New Project" : ""}
 
-          <input 
-            type={"search"} 
-            placeholder="Search" 
-            className= {`bg-transparent text-white placeholder-light-white text-base w-full
-            focus:outline-none ${!open && "hidden"}`}
-          />
+          </button>
         </div>
 
         <ul className="pt-2">
@@ -114,7 +119,19 @@ function App() {
             </>
           ))}
         </ul>
+
+        <div className={`flex items-center rounded-md bg-hover-beige mt-6 ${!open ? "px-2.5" : "px-4"} py-2`}>
+          <BiSearchAlt2 className={`text-dark-purple text-2xl block float-left cursor-pointer ${open && "mr-2"}`}/>
+          <input 
+            type={"search"} 
+            placeholder="Search" 
+            className= {`bg-transparent text-dark-purple placeholder-gray text-base w-full
+            focus:outline-none ${!open && "hidden"}`}
+          />
+        </div>
       </div>
+
+
 
       <div className="p-7">
         <h1 className="text-2xl font-semibold">Home Page</h1>
