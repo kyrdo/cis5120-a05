@@ -1,4 +1,3 @@
-
 function DictionaryPage() { 
     return (
         <div className="p-7">

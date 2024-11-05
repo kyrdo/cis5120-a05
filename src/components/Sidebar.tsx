@@ -11,7 +11,7 @@ function Sidebar() {
   const [saveMenuOpen, setSaveMenuOpen] = useState(false);
 
   const Menus = [
-    { title: "Home", spacing: true, icon: <AiFillHome />, link: "/home"},
+    { title: "Home", spacing: true, icon: <AiFillHome />, link: "/"},
     { title: "Dictionary", icon: <BiSolidBookReader />, link: "/dictionary"}, 
     { title: "Projects",
       icon: <BiSolidNotepad />,
