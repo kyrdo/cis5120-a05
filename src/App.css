@@ -40,3 +40,60 @@
 .read-the-docs {
   color: #888;
 } */
+
+.inspo-button {
+    background-color: #E1DCED;
+    color: #5D576B;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    border: 3.5px solid #5D576B;
+    margin: 0 1rem;
+}
+
+.header-1-text {
+    color: #5D576B;
+    font-size: 36pt;
+    font-weight: bold;
+    font-family: 'Noto Sans JP', sans-serif;
+
+}
+
+.header-2-text {   color: #5D576B;
+    font-size: 24pt;
+    font-weight: bold;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.info-text {
+    color: #5D576B;
+    font-size: 20pt;
+
+}
+
+.inspo-block {
+    background-color: #E1DCED;
+    border-radius: 15pt;
+    margin-bottom: 16px;
+    padding: 12px;
+    width: auto;
+}
+
+.delete-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(229, 231, 235);
+    border-radius: 9999px;
+    z-index: 10;
+}
+
+.delete-button:hover {
+    background-color: rgb(209, 213, 219);
+}
+
+
