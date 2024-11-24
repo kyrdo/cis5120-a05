@@ -1,4 +1,4 @@
-import { ImageUp, LetterText, Palette, ScissorsLineDashed, Link } from 'lucide-react';
+import { ImageUp, LetterText, Palette } from 'lucide-react';
 import TextBlock from "./TextBlock.tsx";
 import ImageBlock from "./ImageBlock.tsx";
 import PaletteBlock from "./PaletteBlock.tsx";
@@ -46,8 +46,6 @@ const UploadBlock = ({ addComponent }): JSX.Element => {
             <button className="inspo-button" onClick={() => handleButtonClick('Text')}><LetterText size={iconSize}/></button>
             <button className="inspo-button" onClick={() => handleButtonClick('Image')}><ImageUp size={iconSize}/></button>
             <button className="inspo-button" onClick={() => handleButtonClick('Palette')}><Palette size={iconSize}/></button>
-            <button className="inspo-button" onClick={() => handleButtonClick('Pattern')}><ScissorsLineDashed size={iconSize}/></button>
-            <button className="inspo-button" onClick={() => handleButtonClick('Link')}><Link size={iconSize}/></button>
           </ToggleVisibility>      
       </div>
 
