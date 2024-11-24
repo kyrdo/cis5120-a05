@@ -5,8 +5,11 @@ import { PiYarn } from "react-icons/pi";
 import { AiFillHome } from "react-icons/ai";
 import { BiSolidBookReader, BiSolidNotepad, BiNote, BiSearchAlt2} from "react-icons/bi";
 
-function Sidebar() {
-  const [open, setOpen] = useState(true)
+function Sidebar({ open, setOpen } : 
+  {open: boolean; 
+    setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  }) {
+  //const [open, setOpen] = useState(true)
   const [projMenuOpen, setProjMenuOpen] = useState(false);
   const [saveMenuOpen, setSaveMenuOpen] = useState(false);
 

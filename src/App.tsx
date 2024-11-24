@@ -4,13 +4,17 @@ import Sidebar from './components/Sidebar';
 import HomePage from './components/HomePage';
 import DictionaryPage from './components/DictionaryPage';
 import NewProjPage from './components/NewProj';
+import { useState } from "react";
 
 function App() {
+  const [isOpen, setIsOpen] = useState(true)
  return (
   <Router>
-  <div className="flex">
-    <Sidebar/>
-    <main>
+  <div className="fixed">
+    <Sidebar open={isOpen} setOpen={setIsOpen}/>
+  </div>
+  <div>
+    <main className={`transition-all duration-300 ${isOpen ? "ml-72" : "ml-20"}`}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/dictionary" element={<DictionaryPage />} />
