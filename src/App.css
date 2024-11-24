@@ -70,12 +70,25 @@
 
 }
 
+.inspo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 0 auto;
+    max-width: 1200px;
+    align-items: stretch
+}
+
 .inspo-block {
     background-color: #E1DCED;
     border-radius: 15pt;
     margin-bottom: 16px;
     padding: 12px;
-    width: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .delete-button {
