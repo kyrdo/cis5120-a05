@@ -1,17 +1,28 @@
-const PaletteBlock = () => {
-  return (
-      <div
-          className="inspo-block"
-          style={{
-              background: "linear-gradient(to bottom, #F0ABC9, #FEB47B)",
-              border: "12px solid #E1DCED",
-              borderRadius: "15px",
-          }}
+import ColorPicker from "./ColorPicker.tsx";
+import AddColor from "./AddColor.tsx";
+import { useState } from "react";
 
-      >
-          <h1 className="header-2-text">Lead Colors:</h1>
-          <h1 className="info-text">#F0ABC9, #FEB47B</h1>
+const PaletteBlock = () => {
+  const [components, setComponents] = useState<JSX.Element[]>([]);
+
+  const addComponent = (component: JSX.Element) => {
+    setComponents((prevComponents) => [...prevComponents, component]);
+  };
+
+  return (
+    <div className="inspo-block">
+      <AddColor addComponent={addComponent}/>
+      <div>
+        {components.length === 0 ? (<p></p>) : (
+          components.map((component) => (
+            <div>
+            {component}
+            </div>
+          ))
+        )
+        }
       </div>
+    </div>   
   );
 };
 
