@@ -1,7 +1,8 @@
-import { ScissorsLineDashed, ImageUp, Plus, LetterText, Link, Palette } from 'lucide-react';
+import { ImageUp, Plus, LetterText, Palette } from 'lucide-react';
 import TextBlock from "./TextBlock.tsx";
 import ImageBlock from "./ImageBlock.tsx";
 import PaletteBlock from "./PaletteBlock.tsx";
+import ToggleVisibility from './ToggleVisibility.tsx';
 
 const UploadBlock = ({ addComponent }): JSX.Element => {
 
@@ -34,21 +35,16 @@ const UploadBlock = ({ addComponent }): JSX.Element => {
       <div className="inspo-block" style={{
           display: "flex",
           position: "fixed",
-          bottom: 0,
-          left: "50%",
-          transform: "translateX(-50%)",
+          bottom: "0",
+          left: "99%",
+          transform: "translateX(-100%)",
           zIndex: 9999 //makes sure always on top
       }}>
-          <button className="inspo-button"><Plus size={iconSize} style={{
-              color: "#E1DCED",
-              backgroundColor: "#5D576B",
-              cursor: "default"
-          }}/></button>
-          <button className="inspo-button" onClick={() => handleButtonClick('Text')}><LetterText size={iconSize}/></button>
-          <button className="inspo-button" onClick={() => handleButtonClick('Image')}><ImageUp size={iconSize}/></button>
-          <button className="inspo-button" onClick={() => handleButtonClick('Palette')}><Palette size={iconSize}/></button>
-          <button className="inspo-button" onClick={() => handleButtonClick('Pattern')}><ScissorsLineDashed size={iconSize}/></button>
-          <button className="inspo-button" onClick={() => handleButtonClick('Link')}><Link size={iconSize}/></button>
+          <ToggleVisibility visible={false}>
+            <button className="inspo-button" onClick={() => handleButtonClick('Text')}><LetterText size={iconSize}/></button>
+            <button className="inspo-button" onClick={() => handleButtonClick('Image')}><ImageUp size={iconSize}/></button>
+            <button className="inspo-button" onClick={() => handleButtonClick('Palette')}><Palette size={iconSize}/></button>
+          </ToggleVisibility>      
       </div>
 
   );
