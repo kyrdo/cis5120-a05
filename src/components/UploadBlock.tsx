@@ -32,12 +32,14 @@ const UploadBlock = ({ addComponent }): JSX.Element => {
   return (
 
       <div className="inspo-block" style={{
-          display: "flex",
           position: "fixed",
           bottom: 0,
           left: "50%",
           transform: "translateX(-50%)",
-          zIndex: 9999 //makes sure always on top
+          zIndex: 9999, //makes sure always on top
+          width: "auto",
+          height: "auto",
+          display: "block",
       }}>
           <button className="inspo-button"><Plus size={iconSize} style={{
               color: "#E1DCED",
