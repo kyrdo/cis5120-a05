@@ -23,7 +23,7 @@ function NewProjPage() {
             <UploadBlock addComponent={addComponent}/>
 
             {/* Displays blocks currently in play */}
-            <div>
+            <div className="inspo-grid">
                 {components.length === 0 ? (<p></p>) : (
                     components.map((component, index) => (
 
