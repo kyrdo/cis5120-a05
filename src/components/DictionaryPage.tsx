@@ -1,7 +1,75 @@
+import { useState } from 'react'
+import FollowingList from './FollowingList';
+import TrendingList from './TrendingList';
+import CrochetList from './CrochetList';
+
 function DictionaryPage() { 
+    const categories = [
+        {
+            title: "For You",
+            comp: FollowingList,
+        },
+        {
+            title: "Following",
+            comp: FollowingList,
+        },
+        {
+            title: "Trending",
+            comp: TrendingList,
+        },
+        {
+            title: "Crochet",
+            comp: CrochetList,
+        },
+        {
+            title: "Knitting",
+            comp: FollowingList,
+        },
+        {
+            title: "Amigurumi",
+            comp: FollowingList,
+        },
+        {
+            title: "Blankets",
+            comp: FollowingList,
+        },
+        {
+            title: "Clothing",
+            comp: FollowingList,
+        },
+        {
+            title: "Decor",
+            comp: FollowingList,
+        },
+        {
+            title: "Bags",
+            comp: FollowingList,
+        },
+        {
+            title: "Guides",
+            comp: FollowingList,
+        },
+    ];
+    const [currentActive, setCurrentActive] = useState(categories[0])
     return (
         <div className="p-7">
-            <h1 className="text-2xl font-semibold">Dictionary Page</h1>
+            <div className="sticky top-4 bg-white z-10 py-2">
+                <div className="flex items-center gap-10 border-b border-light-purple text-dark-purple mb-8">
+                    {categories.map((item) => (
+                        <div className={`py-2 
+                        ${item.title === currentActive.title ? 
+                        "border-b border-dark-purple" : ""}
+                        `}>
+                            <button onClick={() => setCurrentActive(item)}>{item.title}</button>
+                            
+                        </div>
+                    ))}
+                </div>
+            </div>
+            
+            <div>
+                <currentActive.comp/>
+            </div>
         </div>
     )
     
