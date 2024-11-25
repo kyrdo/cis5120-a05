@@ -1,4 +1,4 @@
 .palette-block {
-  justify-content: start;
-  padding-top: 1.5rem;
+  justify-content: flex-start;
+  padding: 1.5rem 0;
 }
