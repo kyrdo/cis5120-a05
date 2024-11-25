@@ -1,6 +1,7 @@
 import ColorPicker from "./ColorPicker.tsx";
 import AddColor from "./AddColor.tsx";
 import { useState } from "react";
+import "../css/PaletteBlock.css";
 
 const PaletteBlock = () => {
   const [components, setComponents] = useState<JSX.Element[]>([]);
@@ -10,7 +11,7 @@ const PaletteBlock = () => {
   };
 
   return (
-    <div className="inspo-block">
+    <div className="inspo-block palette-block">
       <AddColor addComponent={addComponent}/>
       <div>
         {components.length === 0 ? (<p></p>) : (

@@ -1,5 +1,6 @@
 import ColorPicker from "./ColorPicker";
 import { Plus } from "lucide-react";
+import "../css/AddColor.css";
 
 const AddColor = ({ addComponent }): JSX.Element => {
   const iconSize = 20; 
@@ -8,7 +9,7 @@ const AddColor = ({ addComponent }): JSX.Element => {
   };
 
   return (
-    <button className="inspo-button" onClick={() => handleButtonClick()}><Plus size={iconSize}/></button>
+    <button className="color-button" onClick={() => handleButtonClick()}>Add Color</button>
   )
 }
 

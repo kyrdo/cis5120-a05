@@ -1,0 +1,8 @@
+.color-button {
+  background-color: #E1DCED;
+  color: #5D576B;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  border: 3.5px solid #5D576B;
+  margin: 0 1rem;
+}
