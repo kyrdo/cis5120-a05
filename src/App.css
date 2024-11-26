@@ -72,11 +72,11 @@
 
 .inspo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 16px;
-    margin: 0 auto;
-    max-width: 1200px;
-    align-items: stretch
+    margin: 0 0;
+    max-width: 100%;
+    align-items: stretch;
 }
 
 .inspo-block {
@@ -110,3 +110,6 @@
 }
 
 
+.main {
+  flex-grow: 1;
+}

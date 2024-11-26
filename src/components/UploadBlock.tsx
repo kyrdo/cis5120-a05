@@ -42,11 +42,17 @@ const UploadBlock = ({ addComponent }): JSX.Element => {
           height: "auto",
           display: "block",
       }}>
+<<<<<<< HEAD
           <ToggleVisibility visible={false}>
             <button className="inspo-button" onClick={() => handleButtonClick('Text')}><LetterText size={iconSize}/></button>
             <button className="inspo-button" onClick={() => handleButtonClick('Image')}><ImageUp size={iconSize}/></button>
             <button className="inspo-button" onClick={() => handleButtonClick('Palette')}><Palette size={iconSize}/></button>
           </ToggleVisibility>      
+=======
+          <button className="inspo-button" onClick={() => handleButtonClick('Text')}><LetterText size={iconSize}/></button>
+          <button className="inspo-button" onClick={() => handleButtonClick('Image')}><ImageUp size={iconSize}/></button>
+          <button className="inspo-button" onClick={() => handleButtonClick('Palette')}><Palette size={iconSize}/></button>
+>>>>>>> main
       </div>
 
   );

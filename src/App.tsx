@@ -10,7 +10,7 @@ function App() {
   <Router>
   <div className="flex">
     <Sidebar/>
-    <main>
+    <main className="main">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/dictionary" element={<DictionaryPage />} />
