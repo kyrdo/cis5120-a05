@@ -1,6 +1,7 @@
 import { Clock } from 'lucide-react';
 
 const TitleBlock = () => {
+  const 
   return (
       <div className="inspo-block">
           <h1 className="header-1-text">Bunny</h1>
