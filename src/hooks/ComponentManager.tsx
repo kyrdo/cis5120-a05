@@ -1,8 +1,12 @@
 import { useState } from 'react';
+import {useLocation} from "react-router-dom";
 
 export const useComponentManager = () => {
 
     const [components, setComponents] = useState<JSX.Element[]>([]);
+
+    const location = useLocation();
+    const projectData = location.state?.projectData;
 
     const addComponent = (component: JSX.Element) => {
         setComponents((prevComponents) => [...prevComponents, component]);
@@ -41,5 +45,6 @@ export const useComponentManager = () => {
         handlePickUp,
         handleDropOnTile,
         handleDragOver,
+        projectData
     };
 };
