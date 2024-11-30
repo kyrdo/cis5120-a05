@@ -20,8 +20,8 @@ function Sidebar() {
       projMenu: true,
       submenuItems: [
         { title: "Add New Project", addIcon: true, icon: <BsPlus/>, link: "/newproj"},
-        { title: "Owl", icon: <BiNote/>, link: "/newproj", data: { projectName: "Owl" }},
-        { title: "Penguin", icon: <BiNote/>, link: "/newproj", data: { projectName: "Penguin" }},
+        { title: "Owl Knit", icon: <BiNote/>, link: "/owlpage"},
+        { title: "Penguin Hat", icon: <BiNote/>, link: "/penguinpage"},
       ],
     },
     { title: "Saved",

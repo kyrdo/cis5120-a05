@@ -1,9 +1,14 @@
-const ImageBlock = () => {
-  return (
-      <div className="inspo-block">
-          <img src="src/assets/image-tile.png" alt="Bunny" style={{ borderRadius: "15pt" }} className="image-style"/>
-      </div>
-  );
+const ImageBlock = ({ src = "src/assets/image-tile.png" }) => {
+    return (
+        <div className="inspo-block">
+            <img
+                src={src}
+                alt="Image Block"
+                style={{ borderRadius: "15pt" }}
+                className="image-style"
+            />
+        </div>
+    );
 };
 
 export default ImageBlock;
