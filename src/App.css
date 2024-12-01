@@ -69,6 +69,10 @@
     background-color: rgb(209, 213, 219);
 }
 
+/* Hide scrollbar but allow scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, Opera */
+}
 
 .main {
   flex-grow: 1;
