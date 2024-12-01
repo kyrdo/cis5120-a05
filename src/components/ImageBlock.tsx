@@ -4,8 +4,8 @@ const ImageBlock = ({ src = "src/assets/image-tile.png" }) => {
             <img
                 src={src}
                 alt="Image Block"
-                style={{ borderRadius: "15pt" }}
-                className="image-style"
+                style={{ borderRadius: "16pt" }}
+                className="image-style max-w-full max-w-[290px]"
             />
         </div>
     );

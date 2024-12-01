@@ -129,7 +129,6 @@ function Sidebar() {
                             className={`text-dark-purple text-sm flex items-center gap-x-4 cursor-pointer p-2 px-5 hover:bg-hover-beige rounded-md`}>
                           <Link
                               to={submenuItem.link}
-                              state={{ projectData: submenuItem.data }}
                               className="flex items-center gap-x-4 w-full">
                               <span className="text-2xl block float-left">
                                 {submenuItem.icon}
