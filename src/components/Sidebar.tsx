@@ -6,14 +6,17 @@ import { AiFillHome } from "react-icons/ai";
 import { BiSolidBookReader, BiSolidNotepad, BiNote, BiSearchAlt2} from "react-icons/bi";
 import UploadBlock from "./UploadBlock.tsx";
 
-function Sidebar() {
-  const [open, setOpen] = useState(true)
+function Sidebar({ open, setOpen } : 
+  {open: boolean; 
+    setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  }) {
+  //const [open, setOpen] = useState(true)
   const [projMenuOpen, setProjMenuOpen] = useState(false);
   const [saveMenuOpen, setSaveMenuOpen] = useState(false);
 
   const Menus = [
-    { title: "Home", spacing: true, icon: <AiFillHome />, link: "/"},
-    { title: "Dictionary", icon: <BiSolidBookReader />, link: "/dictionary"}, 
+    { title: "About", spacing: true, icon: <AiFillHome />, link: "/"},
+    { title: "Explore", icon: <BiSolidBookReader />, link: "/dictionary"}, 
     { title: "Projects",
       icon: <BiSolidNotepad />,
       addIcon: true,
