@@ -7,7 +7,7 @@ function FollowingList() {
             author: "Sandra Smith",
             postImg: "Img",
             date: "November 2, 2024",
-            desc: "In order to create a magic circle... "
+            desc: "In order to create a magic circle, you could have two straight lines of yarn. You want to take your hook. And place it underneath... "
         },
         {
             title: "10 Amigurumis to Make",
@@ -56,20 +56,24 @@ function FollowingList() {
             author: "Sandra Smith",
             postImg: "Img",
             date: "November 2, 2024",
-            desc: "In order to create a magic circle... "
+            desc: "In order to create a magic circle, you could have two straight lines of yarn. You want to take your hook. And place it underneath... "
         },
     ];
     return (
-        <div className="flex flex-col gap-2">
-            <h1 className="text-2xl font-semibold">Following List Component</h1>
-            <div className="flex flex-col gap-5 mb-2">
-                {posts.map((post, i) => 
-                <div>
-                    <PostCard post={post} key={i} />
-                </div>
-                )}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 gap-y-10">
+            {posts.map((post, i) => 
+            <div>
+                <PostCard post={post} key={i} />
             </div>
+            )}
         </div>
+        // <div className="flex flex-wrap gap-10">
+        //     {posts.map((post, i) => 
+        //     <div>
+        //         <PostCard post={post} key={i} />
+        //     </div>
+        //     )}
+        // </div>
     )
     
 }

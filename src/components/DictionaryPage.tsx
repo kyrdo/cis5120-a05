@@ -53,7 +53,7 @@ function DictionaryPage() {
     const [currentActive, setCurrentActive] = useState(categories[0])
     return (
         <div className="p-7">
-            <div className="sticky top-4 bg-white z-10 py-2">
+            <div className="sticky top-0 bg-white z-30 py-2">
                 <div className="flex items-center gap-10 border-b border-light-purple text-dark-purple mb-8">
                     {categories.map((item) => (
                         <div className={`py-2 
