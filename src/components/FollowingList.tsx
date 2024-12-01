@@ -67,13 +67,6 @@ function FollowingList() {
             </div>
             )}
         </div>
-        // <div className="flex flex-wrap gap-10">
-        //     {posts.map((post, i) => 
-        //     <div>
-        //         <PostCard post={post} key={i} />
-        //     </div>
-        //     )}
-        // </div>
     )
     
 }
