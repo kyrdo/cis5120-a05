@@ -4,6 +4,8 @@ import Sidebar from './components/Sidebar';
 import HomePage from './components/HomePage';
 import DictionaryPage from './components/DictionaryPage';
 import NewProjPage from './components/NewProj';
+import OwlPage from "./mock_pages/OwlPage.tsx";
+import PenguinPage from "./mock_pages/PenguinPage.tsx";
 import { useState } from "react";
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/dictionary" element={<DictionaryPage />} />
           <Route path="/newproj" element={<NewProjPage />} />
+            <Route path="/penguinpage" element={<PenguinPage />} />
+            <Route path="/owlpage" element={<OwlPage />} />
         </Routes>
     </main>
   </div>

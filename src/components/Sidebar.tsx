@@ -4,6 +4,7 @@ import { BsArrowLeftShort, BsChevronDown, BsPlus, BsBookmarksFill } from "react-
 import { PiYarn } from "react-icons/pi";
 import { AiFillHome } from "react-icons/ai";
 import { BiSolidBookReader, BiSolidNotepad, BiNote, BiSearchAlt2} from "react-icons/bi";
+import UploadBlock from "./UploadBlock.tsx";
 
 function Sidebar({ open, setOpen } : 
   {open: boolean; 
@@ -22,9 +23,8 @@ function Sidebar({ open, setOpen } :
       projMenu: true,
       submenuItems: [
         { title: "Add New Project", addIcon: true, icon: <BsPlus/>, link: "/newproj"},
-        { title: "Project 1", icon: <BiNote/>}, 
-        { title: "Project 2", icon: <BiNote/>},
-        { title: "Project 3", icon: <BiNote/>}
+        { title: "Owl Knit", icon: <BiNote/>, link: "/owlpage"},
+        { title: "Penguin Hat", icon: <BiNote/>, link: "/penguinpage"},
       ],
     },
     { title: "Saved",
@@ -127,13 +127,17 @@ function Sidebar({ open, setOpen } :
                         </li>
                         </Link>
                     :
-                        <li key={index} className={`text-dark-purple text-sm flex
-                        items-center gap-x-4 cursor-pointer p-2 px-5 hover:bg-hover-beige 
-                        ounded-md`}>
-                        <span className="text-2xl block float-left">
-                            {submenuItem.icon}
-                        </span>
-                        {submenuItem.title}
+                        <li
+                            key={index}
+                            className={`text-dark-purple text-sm flex items-center gap-x-4 cursor-pointer p-2 px-5 hover:bg-hover-beige rounded-md`}>
+                          <Link
+                              to={submenuItem.link}
+                              className="flex items-center gap-x-4 w-full">
+                              <span className="text-2xl block float-left">
+                                {submenuItem.icon}
+                              </span>
+                            {submenuItem.title}
+                          </Link>
                         </li>
                   ))}
                 </ul>

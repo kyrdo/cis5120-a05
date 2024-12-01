@@ -1,46 +1,6 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.p-7 {
+  width: 100%
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-} */
-
 .inspo-button {
     background-color: #E1DCED;
     color: #5D576B;
@@ -52,22 +12,31 @@
 
 .header-1-text {
     color: #5D576B;
-    font-size: 36pt;
+    font-size: 20pt;
     font-weight: bold;
     font-family: 'Noto Sans JP', sans-serif;
 
 }
 
 .header-2-text {   color: #5D576B;
-    font-size: 24pt;
+    font-size: 18pt;
     font-weight: bold;
     font-family: 'Noto Sans JP', sans-serif;
 }
 
 .info-text {
     color: #5D576B;
-    font-size: 20pt;
+    font-size: 14pt;
 
+}
+
+.inspo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+    margin: 0 0;
+    max-width: 100%;
+    align-items: stretch;
 }
 
 .inspo-block {
@@ -75,7 +44,11 @@
     border-radius: 15pt;
     margin-bottom: 16px;
     padding: 12px;
-    width: auto;
+    width: "max-w-[296px]";
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .delete-button {
@@ -97,3 +70,6 @@
 }
 
 
+.main {
+  flex-grow: 1;
+}

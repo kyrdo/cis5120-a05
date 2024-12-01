@@ -10,20 +10,23 @@ function NewProjPage() {
         deleteComponent,
         handlePickUp,
         handleDropOnTile,
-        handleDragOver
+        handleDragOver,
+        projectData
     } = useComponentManager();
 
     return (
         <div className="p-7">
 
             {/* Name of project */}
-            <TitleBlock/>
+            <TitleBlock
+                title={projectData?.projectName}
+            />
 
             {/* Upload bar at bottom of screen */}
             <UploadBlock addComponent={addComponent}/>
 
             {/* Displays blocks currently in play */}
-            <div>
+            <div className="inspo-grid">
                 {components.length === 0 ? (<p></p>) : (
                     components.map((component, index) => (
 
