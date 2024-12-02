@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { BsBookmark, BsBookmarkFill} from "react-icons/bs"
 
 type Post = {
@@ -20,16 +21,16 @@ const PostCard: React.FC<PostCardProps> = ({ post, key }) => {
             
             <div className="relative flex flex-col p-4">
                 <div className="flex-[1] mb-2 z-10 ">
-                    <img src="src/assets/image-tile.png" alt="postImg" className="border-2 rounded-lg w-full h-auto" />
+                    <img src={post.postImg} alt="postImg" className="border-2 rounded-lg w-full h-auto" />
                 </div>
-                <div className="flex flex-row w-full justify-between pb-2 font-semibold text-dark-purple capitalize group-hover:text-white z-20">
+                <div className="flex flex-row w-full justify-between pb-2 font-semibold text-almost-black capitalize group-hover:text-white z-20">
                     <p>{post.author}</p>
                     <BsBookmark className="text-xl"/>
                 </div>
-                <h2 className="text-xl group-hover:text-white z-20 font-bold text-dark-purple line-clamp-2 leading-6 capitalize py-2 hover:text-white">
+                <h2 className="text-xl group-hover:text-white z-20 font-bold text-almost-black line-clamp-2 leading-6 capitalize py-2 hover:text-white">
                     {post.title}
                 </h2>
-                <div className="text-dark-purple line-clamp-2 leading-5 group-hover:text-white z-20">
+                <div className="text-custom-gray line-clamp-2 leading-5 group-hover:text-white z-20">
                     {post.desc}
                 </div>
             </div>

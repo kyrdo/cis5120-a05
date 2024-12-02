@@ -31,7 +31,7 @@ const UploadBlock = ({ addComponent }): JSX.Element => {
 
   return (
 
-      <div className="inspo-block" style={{
+      <div className="inspo-block-2" style={{
           position: "fixed",
           bottom: 0,
           left: "50%",
@@ -41,9 +41,9 @@ const UploadBlock = ({ addComponent }): JSX.Element => {
           height: "auto",
           display: "block",
       }}>
-          <button className="inspo-button" onClick={() => handleButtonClick('Text')}><LetterText size={iconSize}/></button>
-          <button className="inspo-button" onClick={() => handleButtonClick('Image')}><ImageUp size={iconSize}/></button>
-          <button className="inspo-button" onClick={() => handleButtonClick('Palette')}><Palette size={iconSize}/></button>
+          <button className="inspo-button-2" onClick={() => handleButtonClick('Text')}><LetterText size={iconSize}/></button>
+          <button className="inspo-button-2" onClick={() => handleButtonClick('Image')}><ImageUp size={iconSize}/></button>
+          <button className="inspo-button-2" onClick={() => handleButtonClick('Palette')}><Palette size={iconSize}/></button>
       </div>
 
   );

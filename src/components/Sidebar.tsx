@@ -165,7 +165,7 @@ function Sidebar({ open, setOpen } :
           <input 
             type={"search"} 
             placeholder="Search" 
-            className= {`bg-transparent text-dark-purple placeholder-gray text-base w-full
+            className= {`bg-transparent text-dark-purple placeholder-dark-purple text-base w-full
             focus:outline-none ${!open && "hidden"}`}
           />
         </div>

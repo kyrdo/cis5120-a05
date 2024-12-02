@@ -15,7 +15,7 @@ function App() {
   <div className="fixed">
     <Sidebar open={isOpen} setOpen={setIsOpen}/>
   </div>
-  <div className="mb-40">
+  <div className="pb-40">
     <main className={`transition-all duration-300 ${isOpen ? "ml-72" : "ml-20"}`}>
         <Routes>
           <Route path="/" element={<HomePage />} />
