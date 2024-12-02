@@ -3,7 +3,7 @@
 }
 .inspo-button {
     background-color: #E1DCED;
-    color: #FC786D;
+    color: #F26D70;
     border-radius: 0.8rem;
     cursor: pointer;
     border: 3.5px solid #FEF1E4;
@@ -11,7 +11,7 @@
 }
 .inspo-button-2 {
   background-color: #FAE4DA;
-  color: #FC786D;
+  color: #F26D70;
   border-radius: 0.8rem;
   cursor: pointer;
   border: 3.5px solid #FAE4DA;
@@ -60,7 +60,7 @@
 }
 
 .inspo-block-2 {
-  background-color:#FC786D /*#f1e2f3 /*#E1DCED*/;
+  background-color:#F26D70 /*#f1e2f3 /*#E1DCED*/;
   border-radius: 15pt;
   margin-bottom: 16px;
   padding: 12px;
