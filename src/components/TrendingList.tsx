@@ -10,11 +10,18 @@ function TrendingList() {
             desc: "Create trendy, lightweight knitted crop tops that pair perfectly with high-waisted jeans or skirts."
         },
         {
-            title: "10 Beginner-Friendly Crochet Projects to Start Today",
-            author: "Liam Johnson",
-            postImg: "src/explore-imgs/crochet-square.jpg",
+            title: "Chunky Crochet Cardigans: Cozy and On-Trend",
+            author: "Lea Bennett",
+            postImg: "src/explore-imgs/trend-1.jpeg",
             date: "November 2, 2024",
-            desc: "First-time crocheter? Crocheting can seem intimidating, but here are some quick and easy projects to get your feet wet!"
+            desc: "Wrap yourself in warmth and style with this chunky crochet cardigan pattern."
+        },
+        {
+            title: "I Made a Temperature Blanket!",
+            author: "Lucas Anderson",
+            postImg: "src/explore-imgs/temp-blanket.jpg",
+            date: "November 2, 2024",
+            desc: "Temperature blankets are soooo fun to make! Every day you do a new row. Of course, sometimes, you forget a day here and..."
         },
         {
             title: "Quick and Easy Gifts: 5 Knitting Patterns You Can Finish in a...",
@@ -24,16 +31,9 @@ function TrendingList() {
             desc: "The holidays are coming up! Here are some perfect gifts you can knit up for your loved ones"
         },
         {
-            title: "Chunky Crochet Cardigans: Cozy and On-Trend",
-            author: "Lea Bennett",
-            postImg: "src/explore-imgs/yarn.jpeg",
-            date: "November 2, 2024",
-            desc: "Wrap yourself in warmth and style with this chunky crochet cardigan pattern."
-        },
-        {
             title: "Crochet Granny Square Bags: Retro Meets Modern",
             author: "Jade Huang",
-            postImg: "src/explore-imgs/boots-knit.jpg",
+            postImg: "src/explore-imgs/trend-2.jpg",
             date: "November 2, 2024",
             desc: "Revamp the classic granny square for stylish, modern bags. Perfect for casual outings or a day at the beach."
         },
