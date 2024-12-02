@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import FollowingList from './FollowingList';
+import ForYouList from './ForYouList';
 import TrendingList from './TrendingList';
 import CrochetList from './CrochetList';
 
@@ -7,7 +8,7 @@ function DictionaryPage() {
     const categories = [
         {
             title: "For You",
-            comp: FollowingList,
+            comp: ForYouList,
         },
         {
             title: "Following",
@@ -50,19 +51,19 @@ function DictionaryPage() {
             comp: FollowingList,
         },
         {
-            title: "Guides",
+            title: "Socks",
             comp: FollowingList,
         },
         {
-            title: "Guides",
+            title: "Slippers",
             comp: FollowingList,
         },
         {
-            title: "Guides",
+            title: "Pet",
             comp: FollowingList,
         },
         {
-            title: "Guides",
+            title: "Home",
             comp: FollowingList,
         },
     ];
