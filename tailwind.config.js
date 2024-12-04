@@ -11,11 +11,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        'dark-purple': '#5D576B',
-        'light-purple': '#C5C0D0',
-        'beige': "#F0EEE6",
-        'hover-beige': '#E6E3DA',
-        'light-white': 'rgba(255, 255, 255, 0.5)'
+        'dark-purple': '#F26D70', //'#5D576B',
+        'light-purple': '#F0ABAF', //'#C5C0D0',
+        'beige': '#FAE4DA', //'#FEF1E4', //"#F0EEE6",
+        'hover-beige': '#F1D0C0', //'#E6E3DA',
+        'light-white': 'rgba(255, 255, 255, 0.5)',
+        'almost-black': '#5A3957',
+        'custom-gray': '#B7ACAC'
       }
     },
   },

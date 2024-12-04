@@ -3,18 +3,15 @@ import { Plus } from 'lucide-react';
 
 const ToggleVisibility = ({
   visible = true,
-  iconSize = 60,
+  iconSize = 45,
   children }) => {
   const [show, setShow] = useState(visible)
 
   return (
     <React.Fragment>
       {show && children}
-      <button className="inspo-button" onClick={() => setShow(!show)}>
-      <Plus size={iconSize} style={{
-              color: "#E1DCED",
-              backgroundColor: "#5D576B"
-          }}/>
+      <button className="inspo-button-2" onClick={() => setShow(!show)}>
+      <Plus size={iconSize}/>
       </button>
     </React.Fragment>
   )

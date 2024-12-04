@@ -6,7 +6,7 @@ import ToggleVisibility from './ToggleVisibility.tsx';
 
 const UploadBlock = ({ addComponent }): JSX.Element => {
 
- const iconSize = 60
+ const iconSize = 45
 
   const handleButtonClick = (action: string) => {
 
@@ -32,7 +32,7 @@ const UploadBlock = ({ addComponent }): JSX.Element => {
 
   return (
 
-      <div className="inspo-block" style={{
+      <div className="inspo-block-2" style={{
           position: "fixed",
           bottom: "0",
           left: "99%",
@@ -43,9 +43,9 @@ const UploadBlock = ({ addComponent }): JSX.Element => {
           display: "block",
       }}>
           <ToggleVisibility visible={false}>
-            <button className="inspo-button" onClick={() => handleButtonClick('Text')}><LetterText size={iconSize}/></button>
-            <button className="inspo-button" onClick={() => handleButtonClick('Image')}><ImageUp size={iconSize}/></button>
-            <button className="inspo-button" onClick={() => handleButtonClick('Palette')}><Palette size={iconSize}/></button>
+            <button className="inspo-button-2" onClick={() => handleButtonClick('Text')}><LetterText size={iconSize}/></button>
+            <button className="inspo-button-2" onClick={() => handleButtonClick('Image')}><ImageUp size={iconSize}/></button>
+            <button className="inspo-button-2" onClick={() => handleButtonClick('Palette')}><Palette size={iconSize}/></button>
           </ToggleVisibility>      
       </div>
 

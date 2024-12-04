@@ -4,24 +4,27 @@ import { BsArrowLeftShort, BsChevronDown, BsPlus, BsBookmarksFill } from "react-
 import { PiYarn } from "react-icons/pi";
 import { AiFillHome } from "react-icons/ai";
 import { BiSolidBookReader, BiSolidNotepad, BiNote, BiSearchAlt2} from "react-icons/bi";
+import UploadBlock from "./UploadBlock.tsx";
 
-function Sidebar() {
-  const [open, setOpen] = useState(true)
+function Sidebar({ open, setOpen } : 
+  {open: boolean; 
+    setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  }) {
+  //const [open, setOpen] = useState(true)
   const [projMenuOpen, setProjMenuOpen] = useState(false);
   const [saveMenuOpen, setSaveMenuOpen] = useState(false);
 
   const Menus = [
-    { title: "Home", spacing: true, icon: <AiFillHome />, link: "/"},
-    { title: "Dictionary", icon: <BiSolidBookReader />, link: "/dictionary"}, 
+    { title: "About", spacing: true, icon: <AiFillHome />, link: "/"},
+    { title: "Explore", icon: <BiSolidBookReader />, link: "/dictionary"}, 
     { title: "Projects",
       icon: <BiSolidNotepad />,
       addIcon: true,
       projMenu: true,
       submenuItems: [
         { title: "Add New Project", addIcon: true, icon: <BsPlus/>, link: "/newproj"},
-        { title: "Project 1", icon: <BiNote/>}, 
-        { title: "Project 2", icon: <BiNote/>},
-        { title: "Project 3", icon: <BiNote/>}
+        { title: "Owl Knit", icon: <BiNote/>, link: "/owlpage"},
+        { title: "Penguin Hat", icon: <BiNote/>, link: "/penguinpage"},
       ],
     },
     { title: "Saved",
@@ -124,13 +127,17 @@ function Sidebar() {
                         </li>
                         </Link>
                     :
-                        <li key={index} className={`text-dark-purple text-sm flex
-                        items-center gap-x-4 cursor-pointer p-2 px-5 hover:bg-hover-beige 
-                        ounded-md`}>
-                        <span className="text-2xl block float-left">
-                            {submenuItem.icon}
-                        </span>
-                        {submenuItem.title}
+                        <li
+                            key={index}
+                            className={`text-dark-purple text-sm flex items-center gap-x-4 cursor-pointer p-2 px-5 hover:bg-hover-beige rounded-md`}>
+                          <Link
+                              to={submenuItem.link}
+                              className="flex items-center gap-x-4 w-full">
+                              <span className="text-2xl block float-left">
+                                {submenuItem.icon}
+                              </span>
+                            {submenuItem.title}
+                          </Link>
                         </li>
                   ))}
                 </ul>
@@ -158,7 +165,7 @@ function Sidebar() {
           <input 
             type={"search"} 
             placeholder="Search" 
-            className= {`bg-transparent text-dark-purple placeholder-gray text-base w-full
+            className= {`bg-transparent text-dark-purple placeholder-dark-purple text-base w-full
             focus:outline-none ${!open && "hidden"}`}
           />
         </div>
