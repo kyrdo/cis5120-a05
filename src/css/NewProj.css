@@ -1,8 +1,8 @@
-.p-7 {
+/* .p-7 {
   width: 100%
-}
+} */
 
-.inspo-grid {
+/* .inspo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 16px;
@@ -21,9 +21,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
+} */
 
-.delete-button {
+/* .delete-button {
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
@@ -39,4 +39,4 @@
 
 .delete-button:hover {
   background-color: rgb(209, 213, 219);
-}
+} */
