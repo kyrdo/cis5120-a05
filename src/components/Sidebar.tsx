@@ -32,10 +32,7 @@ function Sidebar({ open, setOpen } :
       addIcon: true,
       saveMenu: true,
       submenuItems: [
-        { title: "Add to Saved", addIcon: true, icon: <BsPlus/>},
-        { title: "Project 1", icon: <BiNote/>},
-        { title: "Project 2", icon: <BiNote/>}, 
-        { title: "Project 3", icon: <BiNote/>},
+        { title: "Elephant toy", icon: <BiNote/>, link: "/elephantpage"},
       ],
     },
   ];
@@ -148,10 +145,14 @@ function Sidebar({ open, setOpen } :
                     <li key={index} className={`text-dark-purple text-sm flex
                     items-center gap-x-4 cursor-pointer p-2 px-5 hover:bg-hover-beige 
                     ounded-md`}>
-                      <span className="text-2xl block float-left">
-                        {submenuItem.icon}
-                      </span>
-                      {submenuItem.title}
+                          <Link
+                              to={submenuItem.link}
+                              className="flex items-center gap-x-4 w-full">
+                              <span className="text-2xl block float-left">
+                                {submenuItem.icon}
+                              </span>
+                            {submenuItem.title}
+                          </Link>
                     </li>
                   ))}
                 </ul>

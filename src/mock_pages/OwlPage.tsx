@@ -23,14 +23,13 @@ function OwlPage() {
         <ImageBlock src={"src/mock_pages/owl_media/owl_1.jpg"} />,
         <TextBlock title="Still to finish:" points={["Complete owl eyes", "Finish owl wings", "Stitch owl beak"]} />,
         <ImageBlock src={"src/mock_pages/owl_media/owl_2.jpg"} />,
-        <PaletteBlock />,
+        <PaletteBlock colors={["#6B4C7A", "#83677B"]} />,
         <TextBlock title="Yarn choices for owl design" points={["Brown for body", "White for eyes", "Yellow for beak"]} />,
         <TextBlock title="Challenges with the owl pattern" points={["Getting the eye shape right", "Finding matching yarn", "Ensuring even stitches"]} />,
         <ImageBlock src={"src/mock_pages/owl_media/owl_5.jpg"} />,
         <TextBlock title="Owl-themed project goals" points={["Create a unique gift", "Master owl details", "Experiment with textures"]} />,
         <ImageBlock src={"src/mock_pages/owl_media/owl_6.jpg"} />,
         <ImageBlock src={"src/mock_pages/owl_media/owl_3.jpg"} />,
-        <PaletteBlock />,
         <TextBlock title="Next steps for the project:" points={["Finish body", "Start wings", "Add detailing to eyes"]} />
     ];
 
