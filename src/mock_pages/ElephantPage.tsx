@@ -47,7 +47,7 @@ function ElephantPage() {
 
             {/* Name of project */}
             <TitleBlock
-                title={"Elephant toy"}
+                title={projectData?.projectName}
             />
 
             {/* Upload bar at bottom of screen */}
@@ -56,13 +56,13 @@ function ElephantPage() {
             {/* Displays blocks currently in play */}
             <div className="inspo-grid">
                 {components.length === 0 ? (<p></p>) : (
-                    components.map((component, index) => (
+                    components.map(({id, element}, index) => (
 
                         <div
 
                             /*drag elements*/
                             draggable
-                            key={index}
+                            key={id}
                             className="relative"
                             style={{ cursor: 'move' }}
 
@@ -73,19 +73,19 @@ function ElephantPage() {
                         >
 
                             {/*delete elements*/}
-                            <button className="delete-button" onClick={(e) => {
-                                e.stopPropagation();
-                                deleteComponent(index); }}>
+                            <button className="delete-button"
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        deleteComponent(index); }}>
                                 <span className="text-gray-600">×</span>
                             </button>
 
-                            {component}
+                            {element}
 
                         </div>
                     ))
                 )}
             </div>
-
         </div>
     );
 }
