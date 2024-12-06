@@ -3,13 +3,16 @@ import {useLocation} from "react-router-dom";
 
 export const useComponentManager = () => {
 
-    const [components, setComponents] = useState<JSX.Element[]>([]);
+    const [components, setComponents] = useState<{ id: string, element: JSX.Element }[]>([]);
 
     const location = useLocation();
     const projectData = location.state?.projectData;
 
     const addComponent = (component: JSX.Element) => {
-        setComponents((prevComponents) => [...prevComponents, component]);
+        setComponents((prevComponents) => [
+            ...prevComponents,
+            { id: `${Date.now()}-${Math.random()}`, element: component }
+        ]);
     };
 
     const deleteComponent = (indexToDelete: number) => {

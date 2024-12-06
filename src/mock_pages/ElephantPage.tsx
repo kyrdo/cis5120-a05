@@ -6,45 +6,45 @@ import {useEffect} from "react";
 import ImageBlock from "../components/ImageBlock.tsx";
 import PaletteBlock from "../components/PaletteBlock.tsx";
 
-import penguin_1 from '../assets/penguin_media/penguin_1.jpg';
-import penguin_2 from '../assets/penguin_media/penguin_2.jpg';
-import penguin_3 from '../assets/penguin_media/penguin_3.png';
-import penguin_4 from '../assets/penguin_media/penguin_4.png';
-import penguin_5 from '../assets/penguin_media/penguin_5.png';
-import penguin_6 from '../assets/penguin_media/penguin_6.png';
+import elephant_1 from '../assets/elephant_media/elephant_1.jpeg';
+import elephant_2 from '../assets/elephant_media/elephant_2.jpeg';
+import elephant_3 from '../assets/elephant_media/elephant_3.jpg';
+import elephant_4 from '../assets/elephant_media/elephant_4.jpg';
+import elephant_5 from '../assets/elephant_media/elephant_5.jpg';
 
-function PenguinPage() {
+function ElephantPage() {
 
     const {
+        projectData,
         components,
         addComponent,
         deleteComponent,
         handlePickUp,
         handleDropOnTile,
         handleDragOver,
-        projectData,
     } = useComponentManager();
 
-    const penguin_components = [
-        <ImageBlock src={penguin_3} />,
-        <TextBlock title="Penguin hat for winter" points={["Perfect for cold weather", "A fun gift idea", "Stylish and cozy accessory"]} />,
-        <ImageBlock src={penguin_2} />,
-        <PaletteBlock colors={["#87CEEB", "#1E90FF", "#4682B4"]} />,
-        <TextBlock title="Penguin Hat Design Ideas" points={["Add a pom-pom on top", "Use black and white yarn for contrast", "Include a little scarf on the penguin"]} />,
-        <TextBlock title="Yarn selection for penguin hat" points={["Black for the hat base", "White for the belly", "Orange for the beak and feet"]} />,
-        <ImageBlock src={penguin_4} />,
-        <ImageBlock src={penguin_6} />,
-        <TextBlock title="Things to finish on the penguin hat" points={["Knit the penguin's beak", "Finish the penguin's wings", "Attach the penguin's eyes"]} />,
-        <TextBlock title="Challenges in penguin hat project" points={["Shaping the penguin's body", "Ensuring the beak is proportionate", "Making the hat fit properly"]} />,
-        <ImageBlock src={penguin_1} />,
-        <ImageBlock src={penguin_5} />,
-        <TextBlock title="Penguin hat completion goals" points={["Finish the penguin face", "Weave in all loose ends", "Add a warm lining"]} />
+    const elephant_components = [
+        <TextBlock title="Next focus areas:" points={["Finish crocheting the legs", "Attach legs to the body", "Begin shaping the head"]} />,
+        <ImageBlock src={elephant_2} />,
+        <TextBlock title="Upcoming tasks:" points={["Complete the main body section", "Add safety eyes to the head", "Create and attach the tail"]} />,
+        <TextBlock title="To-do list for detailing:" points={["Crochet the elephant's ears", "Stitch detailing to the ears", "Attach ears to the head"]} />,
+        <ImageBlock src={elephant_3} />,
+        <TextBlock title="Plan for the face:" points={["Add embroidery details to the trunk", "Attach the trunk to the face", "Stuff and close the head"]} />,
+        <TextBlock title="Steps for finishing the limbs:" points={["Start assembling the legs and body", "Finish detailing around the feet", "Secure all seams tightly"]} />,
+        <ImageBlock src={elephant_4} />,
+        <PaletteBlock colors={["#FADADD", "#CCE7FF", "#F4C2C2"]} />,
+        <ImageBlock src={elephant_1} />,
+        <TextBlock title="Decorative additions checklist:" points={["Design and crochet a decorative blanket for the elephant", "Attach blanket securely to the back", "Add finishing touches to the eyes"]} />,
+        <TextBlock title="Final assembly tasks:" points={["Crochet and shape the tusks", "Securely attach tusks to the head", "Final check for loose threads"]} />,
+        <ImageBlock src={elephant_5} />,
+        <TextBlock title="Steps to finalize the body:" points={["Complete crocheting the elephant's trunk", "Sew the ears to the head", "Add stuffing to the body"]} />
+
     ];
 
     useEffect(() => {
-        for (let i = 0; i < 3; i++) {
-            penguin_components.forEach(component => {
-                addComponent(component);});
+        for (let i = 0; i < elephant_components.length; i++) {
+                addComponent(elephant_components[i]);
         }
     }, [projectData]);
 
@@ -96,4 +96,4 @@ function PenguinPage() {
     );
 }
 
-export default PenguinPage;
+export default ElephantPage;

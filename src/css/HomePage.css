@@ -1,0 +1,80 @@
+ul {
+  list-style: circle;
+  margin: 0.5rem 0;
+  padding: 0 1rem;
+}
+
+p {
+  margin: .5rem 0;
+}
+
+p.before-list {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  margin: .5rem 0;
+}
+
+h2 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  margin: .5rem 0;
+}
+
+h3 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  margin: .5rem 0;
+}
+
+/* .home {
+  display: flex;
+
+} */
+
+.lo-fi, .hi-fi, .revisions, .implementation {
+  display: flex;
+  align-items: center;
+}
+
+.goals {
+  width: 30%;
+}
+
+.findings {
+  width: 70%;
+}
+
+.text {
+  width: 50%;
+}
+
+.images {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: end;
+}
+
+.image-1 {
+  padding: 1rem;
+  width: 90%;
+}
+
+.image {
+  padding: 1rem;
+  width: 50%;
+}
+
+.interviews, .desktop {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}

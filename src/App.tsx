@@ -1,5 +1,5 @@
 import './App.css'
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import HomePage from './components/HomePage';
 import ExplorePage from './components/ExplorePage';
@@ -7,6 +7,7 @@ import NewProjPage from './components/NewProj';
 import OwlPage from "./mock_pages/OwlPage.tsx";
 import PenguinPage from "./mock_pages/PenguinPage.tsx";
 import { useState } from "react";
+import ElephantPage from "./mock_pages/ElephantPage.tsx";
 
 function App() {
   const [isOpen, setIsOpen] = useState(true)
@@ -23,6 +24,7 @@ function App() {
           <Route path="/newproj" element={<NewProjPage />} />
             <Route path="/penguinpage" element={<PenguinPage />} />
             <Route path="/owlpage" element={<OwlPage />} />
+            <Route path="/elephantpage" element={<ElephantPage />} />
         </Routes>
     </main>
   </div>
