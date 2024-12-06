@@ -1,0 +1,15 @@
+input {
+  color: #5A3957;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #f8f1e9;
+}
+
+input::placeholder {
+  color: #5a395772;
+}
+
+input:focus{
+  outline: none;
+}

@@ -20,14 +20,14 @@
 
 .header-1-text {
     color: #5A3957;
-    font-size: 20pt;
+    font-size: 2rem;
     font-weight: bold;
     font-family: 'Noto Sans JP', sans-serif;
 
 }
 
 .header-2-text {   color:#5A3957/* #5D576B*/;
-    font-size: 18pt;
+    font-size: 1.5rem;
     font-weight: bold;
     font-family: 'Noto Sans JP', sans-serif;
 }

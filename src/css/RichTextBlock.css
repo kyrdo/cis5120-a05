@@ -1,12 +1,26 @@
-.wrapper-class {
-  padding: 1rem;
-  border: 1px solid #ccc;
+.ql-container {
+  color: #5A3957;
+  font-family: 'Noto Sans JP', sans-serif;
 }
-.editor-class {
-  background-color:lightgray;
-  padding: 1rem;
-  border: 1px solid #ccc;
+
+.ql-container p, .ql-container li {
+  font-size: 1rem;
 }
-.toolbar-class {
-  border: 1px solid #ccc;
+
+.ql-container h1 {
+  font-size: 2rem;
 }
+
+.ql-container h2 {
+  font-size: 1.5rem;
+}
+
+
+.ql-bubble .ql-tooltip {
+  background-color:  #5d576b;
+}
+
+.ql-bubble .ql-tooltip:not(.ql-flip) .ql-tooltip-arrow {
+  border-bottom: 6px solid #5d576b;
+}
+

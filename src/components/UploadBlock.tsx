@@ -18,7 +18,8 @@ const UploadBlock = ({ addComponent }): JSX.Element => {
             newComponent = <ImageBlock />;
             break
          case 'Text':
-            newComponent = <TextBlock title="Animal ideas" points={["Bunny", "Duck", "Teddy bear", "Jelly fish"]}/>;
+            //newComponent = <TextBlock title="Animal ideas" points={["Bunny", "Duck", "Teddy bear", "Jelly fish"]}/>;
+            newComponent = <RichTextBlock />
             break
          case 'Palette':
             newComponent = <PaletteBlock />;
