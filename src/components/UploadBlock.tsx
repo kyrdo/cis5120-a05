@@ -1,5 +1,6 @@
 import { ImageUp, LetterText, Palette } from 'lucide-react';
 import TextBlock from "./TextBlock.tsx";
+import RichTextBlock from "./RichTextBlock.tsx";
 import ImageBlock from "./ImageBlock.tsx";
 import PaletteBlock from "./PaletteBlock.tsx";
 import ToggleVisibility from './ToggleVisibility.tsx';
@@ -17,7 +18,7 @@ const UploadBlock = ({ addComponent }): JSX.Element => {
             newComponent = <ImageBlock />;
             break
          case 'Text':
-            newComponent = <TextBlock />;
+            newComponent = <TextBlock title="Animal ideas" points={["Bunny", "Duck", "Teddy bear", "Jelly fish"]}/>;
             break
          case 'Palette':
             newComponent = <PaletteBlock />;

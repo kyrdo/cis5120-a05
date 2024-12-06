@@ -1,0 +1,8 @@
+.color-toggle {
+  background-color: #FAE4DA;
+  color: #F26D70;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  border: 3.5px solid #FAE4DA;
+  margin: .125rem;
+}

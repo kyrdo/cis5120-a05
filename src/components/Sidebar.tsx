@@ -4,7 +4,6 @@ import { BsArrowLeftShort, BsChevronDown, BsPlus, BsBookmarksFill } from "react-
 import { PiYarn } from "react-icons/pi";
 import { AiFillHome } from "react-icons/ai";
 import { BiSolidBookReader, BiSolidNotepad, BiNote, BiSearchAlt2} from "react-icons/bi";
-import UploadBlock from "./UploadBlock.tsx";
 
 function Sidebar({ open, setOpen } : 
   {open: boolean; 
@@ -16,7 +15,7 @@ function Sidebar({ open, setOpen } :
 
   const Menus = [
     { title: "About", spacing: true, icon: <AiFillHome />, link: "/"},
-    { title: "Explore", icon: <BiSolidBookReader />, link: "/dictionary"}, 
+    { title: "Explore", icon: <BiSolidBookReader />, link: "/explore"}, 
     { title: "Projects",
       icon: <BiSolidNotepad />,
       addIcon: true,

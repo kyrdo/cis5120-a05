@@ -4,7 +4,7 @@ import ForYouList from './ForYouList';
 import TrendingList from './TrendingList';
 import CrochetList from './CrochetList';
 
-function DictionaryPage() { 
+function ExplorePage() { 
     const categories = [
         {
             title: "For You",
@@ -92,4 +92,4 @@ function DictionaryPage() {
     
 }
 
-export default DictionaryPage
+export default ExplorePage
