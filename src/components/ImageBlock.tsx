@@ -1,4 +1,5 @@
-const ImageBlock = ({ src = "src/assets/image-tile.png" }) => {
+import imageUrl from '../assets/image-tile.png';
+const ImageBlock = ({ src = imageUrl}) => {
     return (
         <div className="inspo-block">
             <img

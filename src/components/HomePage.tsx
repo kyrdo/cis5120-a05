@@ -1,4 +1,18 @@
 import '../css/HomePage.css';
+import paper_v2 from '../assets/paper_v2.jpg';
+import paper_v1 from '../assets/paper_v1.jpg';
+import paper_v3 from '../assets/paper_v3.jpg';
+import mood from '../assets/mood.png';
+import styles from '../assets/styles.png';
+import proto_v1_1 from '../assets/proto_v1_1.png';
+import proto_v1_2 from '../assets/proto_v1_2.png';
+import prototype_1 from '../assets/prototype_1.png';
+import prototype_2 from '../assets/prototype_2.png';
+import prototype_3 from '../assets/prototype_3.png';
+import prototype_4 from '../assets/prototype_4.png';
+import pivot from '../assets/pivot.png';
+import variant1 from '../assets/variant1.png';
+import variant2 from '../assets/variant2.png';
 
 function HomePage() { 
     return (
@@ -64,21 +78,21 @@ function HomePage() {
               <div className="images">
                 <div className="image">
                   <img
-                    src="src/assets/paper_v2.jpg"
+                    src={paper_v2}
                     alt="Second Paper Prototype"
                   />
                   <h3>Second Paper Prototype</h3>
                 </div>
                 <div className="image">
                   <img
-                    src="src/assets/paper_v3.jpg"
+                    src={paper_v3}
                     alt="Final Paper Prototype"
                   />
                   <h3>Final Paper Prototype</h3>
                 </div>
                 <div className="image">
                   <img
-                    src="src/assets/paper_v1.jpg"
+                    src={paper_v1}
                     alt="First Paper Prototype"
                   />
                   <h3>First Paper Prototype</h3>
@@ -89,25 +103,25 @@ function HomePage() {
               <div className="images">
                 <div className="image">
                   <img
-                    src="src/assets/mood.png"
+                    src={mood}
                     alt="YarnDiction Moodboard"
                   />
                   <h3>Moodboard</h3>
                 </div>
                 <div className="image">
                   <img
-                    src="src/assets/styles.png"
+                    src={styles}
                     alt="Style Guide"
                   />
                   <h3>Style Guide</h3>
                 </div>
                 <div className="image">
                   <img
-                    src="src/assets/proto_v1_1.png"
+                    src={proto_v1_1}
                     alt="First Hi-Fi Prototype (part 1)"
                   />
                   <img
-                    src="src/assets/proto_v1_2.png"
+                    src={proto_v1_2}
                     alt="First Hi-Fi Prototype (part 2)"
                   />
                   <h3>First Hi-Fi Prototype</h3>
@@ -145,25 +159,25 @@ function HomePage() {
               <div className="images">
                   <div className="image">
                     <img
-                      src="src/assets/prototype_1.png"
+                      src={prototype_1}
                       alt="Revised Hi-Fi Prototype (part 1)"
                     />
                   </div>
                   <div className="image">
                     <img
-                      src="src/assets/prototype_2.png"
+                      src={prototype_2}
                       alt="Revised Hi-Fi Prototype (part 2)"
                     />
                   </div>
                   <div className="image">
                     <img
-                      src="src/assets/prototype_3.png"
+                      src={prototype_3}
                       alt="Revised Hi-Fi Prototype (part 3)"
                     />
                   </div>
                   <div className="image">
                     <img
-                      src="src/assets/prototype_4.png"
+                      src={prototype_4}
                       alt="Revised Hi-Fi Prototype (part 4)"
                     />
                   </div>
@@ -172,7 +186,7 @@ function HomePage() {
             <div className="desktop">
               <div>
                 <img
-                  src="src/assets/pivot.png"
+                  src={pivot}
                   alt="Desktop Version of Prototype"
                   width="50%"
                 />
@@ -195,25 +209,20 @@ function HomePage() {
               <div className="images">
                 <div className="image-1">
                   <img
-                      src="src/assets/variant1.png"
+                      src={variant1}
                       alt="Non-collapsible toolbar variant design"
                     />
                     <h3>Toolbar Variant 1</h3>
                 </div>
                 <div className="image-1">
                   <img
-                      src="src/assets/variant2.png"
+                      src={variant2}
                       alt="Cllapsible toolbar variant design"
                     />
                     <h3>Toolbar Variant 2</h3>
                 </div>
               </div>
             </div>
-
-            
-
-
-
             <div className="conclusion">
                 <h1>Final Interface</h1>
                 <p>Interact with this website to view our final design.</p>

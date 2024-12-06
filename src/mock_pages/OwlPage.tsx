@@ -2,9 +2,15 @@ import {useComponentManager} from "../hooks/ComponentManager.tsx";
 import UploadBlock from "../components/UploadBlock.tsx";
 import TitleBlock from "../components/TitleBlock.tsx";
 import TextBlock from "../components/TextBlock.tsx";
-import {useEffect, useRef} from "react";
+import {useEffect} from "react";
 import ImageBlock from "../components/ImageBlock.tsx";
 import PaletteBlock from "../components/PaletteBlock.tsx";
+
+import owl_1 from '../assets/owl_media/owl_1.jpg';
+import owl_2 from '../assets/owl_media/owl_2.jpg';
+import owl_3 from '../assets/owl_media/owl_3.jpg';
+import owl_5 from '../assets/owl_media/owl_5.jpg';
+import owl_6 from '../assets/owl_media/owl_6.jpg';
 
 function OwlPage() {
 
@@ -20,16 +26,16 @@ function OwlPage() {
 
     const owl_components = [
         <TextBlock title="Gift ideas for Owl-themed project" points={["Owl cushion", "Owl keychain", "Owl sweater"]} />,
-        <ImageBlock src={"src/mock_pages/owl_media/owl_1.jpg"} />,
+        <ImageBlock src={owl_1} />,
         <TextBlock title="Still to finish:" points={["Complete owl eyes", "Finish owl wings", "Stitch owl beak"]} />,
-        <ImageBlock src={"src/mock_pages/owl_media/owl_2.jpg"} />,
+        <ImageBlock src={owl_2} />,
         <PaletteBlock colors={["#6B4C7A", "#83677B"]} />,
         <TextBlock title="Yarn choices for owl design" points={["Brown for body", "White for eyes", "Yellow for beak"]} />,
         <TextBlock title="Challenges with the owl pattern" points={["Getting the eye shape right", "Finding matching yarn", "Ensuring even stitches"]} />,
-        <ImageBlock src={"src/mock_pages/owl_media/owl_5.jpg"} />,
+        <ImageBlock src={owl_5} />,
         <TextBlock title="Owl-themed project goals" points={["Create a unique gift", "Master owl details", "Experiment with textures"]} />,
-        <ImageBlock src={"src/mock_pages/owl_media/owl_6.jpg"} />,
-        <ImageBlock src={"src/mock_pages/owl_media/owl_3.jpg"} />,
+        <ImageBlock src={owl_6} />,
+        <ImageBlock src={owl_3} />,
         <TextBlock title="Next steps for the project:" points={["Finish body", "Start wings", "Add detailing to eyes"]} />
     ];
 
